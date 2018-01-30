@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from welcome.views import index, health
+from deepfxsite.views import index, health
 
 urlpatterns = [
     # Examples:
@@ -11,7 +11,7 @@ urlpatterns = [
 
     url(r'^$', index),
     url(r'^health$', health),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
